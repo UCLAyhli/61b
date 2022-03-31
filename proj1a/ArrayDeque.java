@@ -3,7 +3,7 @@ public class ArrayDeque<T> {
     private int size;
 
     public ArrayDeque(){
-        items = new T[8];
+        items = (T []) new Object[8];
         size = 0;
     }
 
@@ -16,7 +16,7 @@ public class ArrayDeque<T> {
         size += 1;
     }
     private void resize(int capacity) {
-        T[] a = new T[capacity];
+        T[] a = (T []) new Object[capacity];
         System.arraycopy(items, 0, a, 0, size);
         items = a;
     }
