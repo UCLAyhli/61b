@@ -106,7 +106,7 @@ public class LinkedListDeque<T> {
         }
     }
     public T get(int index){
-        if (index >= num - 1){
+        if (index >= num - 1 || index<0){
             return null;
         }
         else{
@@ -126,7 +126,7 @@ public class LinkedListDeque<T> {
         }
     }
 
-    public node Recur(int index) {
+    private node Recur(int index) {
         if (index == 0) {
             return sent.rest;
         } else {
