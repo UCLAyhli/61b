@@ -79,8 +79,8 @@ public class LinkedListDeque<T> {
         }
         else{
             node re = sent.rest;
-            sent.rest = sent.rest.rest;
-            sent.rest.rest.first = sent;
+            sent.rest = re.rest;
+            re.rest.first = sent;
             num = num - 1;
             T item = re.current;
             re.current = null;
@@ -95,8 +95,8 @@ public class LinkedListDeque<T> {
         }
         else{
             node re = sent.first;
-            sent.first = sent.first.first;
-            sent.first.first.rest = sent;
+            sent.first = re.first;
+            re.first.rest = sent;
             num = num - 1;
             T item = re.current;
             re.current = null;
