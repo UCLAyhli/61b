@@ -106,7 +106,7 @@ public class LinkedListDeque<T> {
         }
     }
     public T get(int index){
-        if (index >= num - 1 || index<0){
+        if (index > num - 1 || index<0){
             return null;
         }
         else{

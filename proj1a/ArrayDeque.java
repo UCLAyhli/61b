@@ -54,7 +54,7 @@ public class ArrayDeque<T> {
         }
         T item = items[0];
         if (size-1 <= 0.25*items.length && 0.5*items.length > 8){
-            resize((int)0.5*items.length);
+            resize((int)(0.5*items.length));
         }
         else if(size-1 <= 0.25*items.length && 0.5*items.length <= 8){
             resize(8);

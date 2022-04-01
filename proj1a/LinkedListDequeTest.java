@@ -42,8 +42,9 @@ public class LinkedListDequeTest {
 		boolean passed = checkEmpty(true, lld1.isEmpty());
 
 		lld1.addLast(0);
+		int a = lld1.get(0);
 		lld1.addLast(1);
-		int a = lld1.removeFirst();
+		a = lld1.removeFirst();
 		lld1.addLast(3);
 		lld1.addLast(4);
 		int b = lld1.removeFirst();
